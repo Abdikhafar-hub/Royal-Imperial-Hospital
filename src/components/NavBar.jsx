@@ -10,9 +10,6 @@ const NavBar = () => {
 
   return (
     <nav className="bg-gray-800 p-4 flex justify-between items-center">
-      <div className="text-white font-bold text-xl">
-        <Link to="/">Hospital Management</Link>
-      </div>
       <div className="md:hidden">
         <button onClick={toggleMenu} className="text-white focus:outline-none">
           <i className={isOpen ? 'fas fa-times' : 'fas fa-bars'}></i>
