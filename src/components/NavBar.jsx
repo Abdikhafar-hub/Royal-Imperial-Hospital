@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import './NavBar.css'; // Import the corresponding CSS
 
 const NavBar = () => {
@@ -12,7 +14,7 @@ const NavBar = () => {
   return (
     <nav className="navbar">
       <div className="menu-icon" onClick={toggleMenu}>
-        <i className={isOpen ? 'fas fa-times' : 'fas fa-bars'}></i>
+        <FontAwesomeIcon icon={isOpen ? faTimes : faBars} />
       </div>
       <ul className={isOpen ? 'nav-links open' : 'nav-links'}>
         <li>
