@@ -1,10 +1,5 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
-import './NavBar.css'; // Import the corresponding CSS
-import '@fortawesome/fontawesome-free/css/all.min.css';
-
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,32 +9,25 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="navbar">
-      <div className="menu-icon" onClick={toggleMenu}>
-        <FontAwesomeIcon icon={isOpen ? faTimes : faBars} />
+    <nav className="bg-gray-800 p-4 flex justify-between items-center">
+      <div className="text-white font-bold text-xl">
+        <Link to="/">Hospital Management</Link>
       </div>
-      <ul className={isOpen ? 'nav-links open' : 'nav-links'}>
-        <li>
-          <Link to="/" className="active">Home</Link>
-        </li>
-        <li>
-          <Link to="/admins">Admins</Link>
-        </li>
-        <li>
-          <Link to="/patients">Patients</Link>
-        </li>
-        <li>
-          <Link to="/doctors">Doctors</Link>
-        </li>
-        <li>
-          <Link to="/appointments">Appointments</Link>
-        </li>
-        <li>
-          <Link to="/medical-records">Medical Records</Link>
-        </li>
+      <div className="md:hidden">
+        <button onClick={toggleMenu} className="text-white focus:outline-none">
+          <i className={isOpen ? 'fas fa-times' : 'fas fa-bars'}></i>
+        </button>
+      </div>
+      <ul className={`md:flex md:space-x-6 md:items-center absolute md:relative bg-gray-800 md:bg-transparent w-full md:w-auto transition-all duration-500 ease-in-out ${isOpen ? 'top-16' : '-top-full'}`}>
+        <li className="text-white py-2 md:py-0 text-center"><Link to="/" onClick={() => setIsOpen(false)}>Home</Link></li>
+        <li className="text-white py-2 md:py-0 text-center"><Link to="/admins" onClick={() => setIsOpen(false)}>Admins</Link></li>
+        <li className="text-white py-2 md:py-0 text-center"><Link to="/patients" onClick={() => setIsOpen(false)}>Patients</Link></li>
+        <li className="text-white py-2 md:py-0 text-center"><Link to="/doctors" onClick={() => setIsOpen(false)}>Doctors</Link></li>
+        <li className="text-white py-2 md:py-0 text-center"><Link to="/appointments" onClick={() => setIsOpen(false)}>Appointments</Link></li>
+        <li className="text-white py-2 md:py-0 text-center"><Link to="/medical-records" onClick={() => setIsOpen(false)}>Medical Records</Link></li>
       </ul>
     </nav>
   );
-}
+};
 
 export default NavBar;
