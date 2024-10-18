@@ -27,11 +27,6 @@ const NavBar = () => {
         <li className="text-white"><Link to="/medical-records">Medical Records</Link></li>
       </ul>
 
-      {/* Logout button */}
-      <button className="bg-red-500 text-white py-2 px-4 rounded">
-        Logout
-      </button>
-
       {/* Mobile menu */}
       <ul className={`absolute md:hidden bg-gray-800 w-full top-16 transition-all duration-500 ease-in-out ${isOpen ? 'block' : 'hidden'}`}>
         <li className="text-white py-2 text-center"><Link to="/" onClick={() => setIsOpen(false)}>Home</Link></li>
