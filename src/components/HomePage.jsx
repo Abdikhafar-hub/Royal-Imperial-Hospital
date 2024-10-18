@@ -50,6 +50,9 @@ function HomePage({ onLogin }) {
           Login
         </button>
       </form>
+      <footer className="mt-6 text-gray-500">
+        Made with ❤️ by <a href="https://www.instagram.com/abdikhafar_issack/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">abdikhafar issack</a>
+      </footer>
     </div>
   );
 }
