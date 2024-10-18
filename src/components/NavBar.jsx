@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import './NavBar.css'; // Import the corresponding CSS
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
