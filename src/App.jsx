@@ -8,6 +8,8 @@ import MedicalRecordsList from './components/MedicalRecordsList';
 import HomePage from './components/HomePage';
 import NavBar from './components/NavBar';
 import './App.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
