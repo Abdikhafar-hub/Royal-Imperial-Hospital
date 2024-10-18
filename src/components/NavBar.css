@@ -3,10 +3,10 @@
   width: 100%;
   background-color: #333;
   overflow: hidden;
-  position: fixed; /* Make it stick to the top */
+  position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000; /* Ensure it stays above other content */
+  z-index: 1000;
 }
 
 /* Links inside the navbar */
@@ -15,18 +15,20 @@
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: center; /* Aligns items in the center */
+  justify-content: space-around;
+  flex-wrap: wrap; /* Ensures the navbar items wrap properly */
 }
 
+/* Navbar list items */
 .navbar ul li {
   padding: 14px 20px;
 }
 
+/* Navbar links */
 .navbar ul li a {
   text-decoration: none;
   color: white;
-  font-size: 1.5rem;
-  text-transform: uppercase;
+  font-size: 1.2rem;
   padding: 14px 20px;
   transition: 0.3s;
 }
@@ -45,10 +47,9 @@
   border-radius: 5px;
 }
 
-/* Media query for responsive design */
+/* Responsive design for mobile screens */
 @media screen and (max-width: 768px) {
   .navbar ul {
-      flex-direction: column;
-      text-align: center;
+    justify-content: space-between; /* Keeps it horizontal but adjusts for small screens */
   }
 }

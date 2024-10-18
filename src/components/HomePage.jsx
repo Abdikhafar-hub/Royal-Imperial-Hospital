@@ -20,7 +20,8 @@ function HomePage({ onLogin }) {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-      <h1 className="text-4xl font-bold text-gray-800 mb-6">Royal Imperial Hospital</h1>
+      <h1 className="text-4xl font-bold text-gray-800 mb-2">Royal Imperial Hospital</h1>
+      <p className="text-sm text-gray-600 mb-6">10th Street Eastleigh, Nairobi</p>
       <h2 className="text-xl font-semibold mb-4">Welcome to Hospital Management System</h2>
       <form className="bg-white p-6 rounded-lg shadow-md w-80" onSubmit={handleSubmit}>
         <div className="mb-4">
@@ -50,9 +51,6 @@ function HomePage({ onLogin }) {
           Login
         </button>
       </form>
-      <footer className="mt-6 text-gray-500">
-        Made with ❤️ by <a href="https://www.instagram.com/abdikhafar_issack/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">abdikhafar issack</a>
-      </footer>
     </div>
   );
 }
