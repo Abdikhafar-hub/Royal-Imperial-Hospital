@@ -1,4 +1,5 @@
 # React + Vite
+#Software solution designed to manage all aspects of hospital operations. It streamlines processes such as patient registration, appointment scheduling, medical record management, billing, and inventory tracking.
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
